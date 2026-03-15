@@ -1,0 +1,34 @@
+﻿<Window x:Class="TestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+        <DockPanel Height="450" Width="400">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <TextBox Height="50" BorderThickness="3" BorderBrush="Black" Grid.Row="0" Name="firstValueTXT"/>
+            <TextBox Height="50" BorderThickness="3" BorderBrush="Black" Grid.Row="1" Name="secondValueTXT"/>
+            <StackPanel Grid.Row="2">
+                <Grid Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="CalcBtn" Grid.Column="0" Background="Green" FontSize="30" Foreground="Wheat" Height="60" Width="150" Click="CalcBtn_Click">Calculate</Button>
+                    <Button Name="ResetBtn" Grid.Column="1" Background="Red" FontSize="30" Foreground="Wheat" Height="60" Width="150" Click="ResetBtn_Click">Reset</Button>
+                </Grid>
+            </StackPanel>
+            <TextBox Height="100" BorderThickness="3" BorderBrush="Black" Grid.Row="3" Name="resultTXT"/>
+        </Grid>
+        </DockPanel>
+        
+</Window>
