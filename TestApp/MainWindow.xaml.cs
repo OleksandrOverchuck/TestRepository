@@ -18,6 +18,9 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    private int _value1;
+    private int _value2;
+
     private void CalcBtn_Click(object sender, RoutedEventArgs e)
     {
 
@@ -25,6 +28,8 @@ public partial class MainWindow : Window
 
     private void ResetBtn_Click(object sender, RoutedEventArgs e)
     {
-
+        firstValueTXT.Text = "";
+        secondValueTXT.Text = "";
+        resultTXT.Text = "";
     }
 }
