@@ -18,9 +18,21 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    private int _firstValue;
+    private int _secondValue;
+
+    
     private void CalcBtn_Click(object sender, RoutedEventArgs e)
     {
-
+        if (int.TryParse(firstValueTXT.Text, out _firstValue) && int.TryParse(secondValueTXT.Text, out _secondValue))
+        {
+            int result = _firstValue + _secondValue;
+            resultTXT.Text = result.ToString();
+        }
+        else
+        {
+            resultTXT.Text = "Incorrect input";
+        }
     }
 
     private void ResetBtn_Click(object sender, RoutedEventArgs e)
