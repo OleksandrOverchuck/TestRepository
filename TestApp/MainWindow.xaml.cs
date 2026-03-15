@@ -37,6 +37,8 @@ public partial class MainWindow : Window
 
     private void ResetBtn_Click(object sender, RoutedEventArgs e)
     {
-
+        firstValueTXT.Text = "";
+        secondValueTXT.Text = "";
+        resultTXT.Text = "";
     }
 }
